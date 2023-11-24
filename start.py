@@ -7,7 +7,7 @@ from PIL import Image
 def createPage():
     
     # Title of the main page
-    pathLogo = './img/AI27Colgate.png'
+    pathLogo = './img/AI27Mars.png'
     display = Image.open(pathLogo)
     display = np.array(display)
     # st.image(display, width = 400)
@@ -16,7 +16,7 @@ def createPage():
     col2.image(display, use_column_width=True)
     #col2.title("Aplicación DataDriven")
 
-    col2.markdown('Bienvenido a ***Aplicación Táctico-Estrátegico AI27 Colgate***, está aplicación provee los pasos tácticos-estrátegicos a seguir para la operación del cliente ***Colgate***')
+    col2.markdown('Bienvenido a ***Aplicación Táctico-Estrátegico AI27 Mars***, está aplicación provee los pasos tácticos-estrátegicos a seguir para la operación del cliente ***Mars***')
 
     col2.write(""" 
     Está aplicación contiene:
