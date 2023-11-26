@@ -177,7 +177,7 @@ def createPage():
         
         st.markdown("<h4 style='text-align: left;'>Paso 3: Consultar Histórico de Robos Mars (Planner) </h4>", unsafe_allow_html=True)
         st.write(""" 
-        La finalidad de este módulo es consultar el histórico de robos de Mondelez. Pasos a seguir para este módulo:
+        La finalidad de este módulo es consultar el histórico de robos de Mars. Pasos a seguir para este módulo:
         1. Seleccionar el **Mes** del cuál desea obtener información en el mapa. Seleccionando el checkbox, puede seleccionar todos los meses del año que presenten robos de Mars.
         2. Seleccionar el **Dia** del cuál desea obtener información en el mapa. Seleccionando el checkbox, puede seleccionar todos los días del año que presenten robos de Mars.
         3. El resultado indica:
@@ -214,13 +214,13 @@ def createPage():
                 selected_dia = containerTS1.multiselect('Día(s):', sorted_unique_dia, key="GG1") 
                 df_selected_dia = df_selected_mes[df_selected_mes['Día'].isin(selected_dia)].astype(str)
     
-        st.markdown("<h5 style='text-align: left;'>Mapa de Robos Colgate</h5>", unsafe_allow_html=True)
+        st.markdown("<h5 style='text-align: left;'>Mapa de Robos Mars</h5>", unsafe_allow_html=True)
 
         mapa_coropleta = map_coropleta_fol(df_selected_dia)
 
-        st.markdown("<h4 style='text-align: left;'>Paso 4: Zonas de Riesgo Colgate</h4>", unsafe_allow_html=True)
+        st.markdown("<h4 style='text-align: left;'>Paso 4: Zonas de Riesgo Mars</h4>", unsafe_allow_html=True)
         st.write(""" 
-        La finalidad de este módulo es visualizar la frecuencia de robos por días y horas por las zonas de riesgo en el comportamiento histórico por meses de los robos de Colgate. 
+        La finalidad de este módulo es visualizar la frecuencia de robos por días y horas por las zonas de riesgo en el comportamiento histórico por meses de los robos de Mars. 
         """)
 
         df4 = df3.copy()
